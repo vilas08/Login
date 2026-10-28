@@ -1,0 +1,10 @@
+{
+  "name": "login-app",
+  "version": "1.0.0",
+  "description": "Full-stack login application",
+  "scripts": {
+    "server": "node backend/server.js",
+    "client": "npx serve frontend",
+    "test:backend": "node -e \"console.log(require('./backend/auth').validateCredentials('username', 'password'))\""
+  }
+}
