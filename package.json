@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Full-stack login application",
   "scripts": {
+    "lint": "node -c backend/auth.js backend/handler.js backend/index.js backend/server.js frontend/script.js",
+    "test": "node -e \"const { validateCredentials } = require('./backend/auth'); if (!validateCredentials('username', 'password')) throw new Error('Valid auth test failed'); if (validateCredentials('wrong', 'pass')) throw new Error('Invalid auth test failed'); console.log('All backend auth tests passed!');\"",
+    "test:backend": "npm test",
     "server": "node backend/server.js",
-    "client": "npx serve frontend",
-    "test:backend": "node -e \"console.log(require('./backend/auth').validateCredentials('username', 'password'))\""
+    "client": "npx serve frontend"
   }
 }

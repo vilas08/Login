@@ -101,3 +101,7 @@ Outputs:
   ApiURL:
     Description: API Gateway login endpoint
     Value: !Sub 'https://${LoginApi}.execute-api.${AWS::Region}.${AWS::URLSuffix}/login'
+
+  DistributionId:
+    Description: CloudFront Distribution ID
+    Value: !Ref Distribution
